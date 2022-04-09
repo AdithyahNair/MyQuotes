@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14C0C8442801DA39007C2A4E /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		14E681B528011CE600D94188 /* MyQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E681B828011CE600D94188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E681BA28011CE600D94188 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 			children = (
 				14E681DE28011FC700D94188 /* MyQuotes.swift */,
 				14E681DC28011FAB00D94188 /* K.swift */,
+				14C0C8442801DA39007C2A4E /* Configuration.storekit */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,7 +128,6 @@
 				BE5FA1F268A13108F374F04A /* Pods-MyQuotes.debug.xcconfig */,
 				FD67D2C421F64A98A18EB812 /* Pods-MyQuotes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

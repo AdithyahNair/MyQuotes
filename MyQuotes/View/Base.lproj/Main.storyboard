@@ -31,7 +31,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MyQuotes" id="BtW-1U-n9n">
-                        <barButtonItem key="rightBarButtonItem" title="Restore" id="3qN-YX-eOc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Restore" id="3qN-YX-eOc">
+                            <connections>
+                                <action selector="restorePressed:" destination="NXI-kk-gLf" id="V0M-9Q-PUJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2n-Ck-JEA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
