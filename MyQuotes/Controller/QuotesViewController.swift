@@ -56,8 +56,6 @@ class QuotesViewController: UITableViewController, SKPaymentTransactionObserver 
             cell.accessoryType = .disclosureIndicator
             tableView.rowHeight = 65
         }
-        
-        
         cell.textLabel?.numberOfLines = 0 // prevents truncation of text
         
         return cell
@@ -94,8 +92,6 @@ class QuotesViewController: UITableViewController, SKPaymentTransactionObserver 
             if transaction.transactionState == .purchased {
                 print("Transaction Successful.")
                 
-                UserDefaults.standard.set(true, forKey: K.isPurchased)
-                
                 showPremiumQuotes()
                 
                 SKPaymentQueue.default().finishTransaction(transaction)
@@ -112,7 +108,11 @@ class QuotesViewController: UITableViewController, SKPaymentTransactionObserver 
     
     func showPremiumQuotes() {
         
+        UserDefaults.standard.set(true, forKey: K.isPurchased)
+        
         quoteType.nonPremiumQuotes.append(contentsOf: quoteType.premiumQuotes)
+        
+        navigationItem.setRightBarButton(nil, animated: true)
         
         tableView.reloadData()
     }
@@ -130,11 +130,16 @@ class QuotesViewController: UITableViewController, SKPaymentTransactionObserver 
         }
     }
     
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+        
+        showPremiumQuotes()
+
+    }
     
-    
+    //MARK: - restorePressed Action
     
     @IBAction func restorePressed(_ sender: UIBarButtonItem) {
         
-        
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
 }
